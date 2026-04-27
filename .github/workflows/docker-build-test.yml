@@ -1,0 +1,19 @@
+name: 🚢 Production Build Test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout Code
+      uses: actions/checkout@v4
+
+    - name: 🐳 Build API Image
+      run: docker build -f Dockerfile-be -t glacier-api:latest .
+
+    - name: 🐳 Build Frontend Image
+      run: docker build -f Dockerfile-fe -t glacier-frontend:latest .
