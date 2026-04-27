@@ -1,6 +1,6 @@
-# 🏛️ Glacier EDU: The Institutional Monorepo
+# 🏛️ Edu-Demia: The Institutional Monorepo
 
-**Glacier EDU** is a premium, real-time academic management ecosystem designed for modern institutions. Built as a high-performance monorepo, it seamlessly bridges professors and students through secure submissions, live notifications, and a transparent grading matrix.
+**Edu-Demia** is a premium, real-time academic management ecosystem designed for modern institutions. Built as a high-performance monorepo, it seamlessly bridges professors and students through secure submissions, live notifications, and a transparent grading matrix.
 
 ---
 
@@ -84,7 +84,7 @@ graph LR
         A[Admin]
     end
 
-    subgraph "Glacier EDU Portal"
+    subgraph "Edu-Demia"
         UC1((Enroll in Course))
         UC2((Submit Assignment))
         UC3((View Notifications))
