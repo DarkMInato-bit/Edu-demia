@@ -77,32 +77,34 @@ erDiagram
 Mapping the institutional roles and their capabilities.
 
 ```mermaid
-useCaseDiagram
-    actor Student
-    actor Teacher
-    actor Admin
+graph LR
+    subgraph Users
+        S[Student]
+        T[Teacher]
+        A[Admin]
+    end
 
-    package "Glacier EDU Portal" {
-        usecase "Enroll in Course" as UC1
-        usecase "Submit Assignment" as UC2
-        usecase "View Notifications" as UC3
-        usecase "Download Submissions" as UC4
-        usecase "Grade Work" as UC5
-        usecase "Create Course" as UC6
-        usecase "Approve Faculty" as UC7
-    }
+    subgraph "Glacier EDU Portal"
+        UC1((Enroll in Course))
+        UC2((Submit Assignment))
+        UC3((View Notifications))
+        UC4((Download Submissions))
+        UC5((Grade Work))
+        UC6((Create Course))
+        UC7((Approve Faculty))
+    end
 
-    Student --> UC1
-    Student --> UC2
-    Student --> UC3
+    S --> UC1
+    S --> UC2
+    S --> UC3
 
-    Teacher --> UC4
-    Teacher --> UC5
-    Teacher --> UC6
-    Teacher --> UC3
+    T --> UC4
+    T --> UC5
+    T --> UC6
+    T --> UC3
 
-    Admin --> UC7
-    Admin --> UC6
+    A --> UC7
+    A --> UC6
 ```
 
 ---
